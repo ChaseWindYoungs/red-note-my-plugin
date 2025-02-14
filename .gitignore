@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files
+.env*.local
+
+
+# cache
+.eslintcache
+.stylelintcache

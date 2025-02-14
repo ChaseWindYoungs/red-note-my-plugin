@@ -1,0 +1,17 @@
+// 定义变量
+$bg-color:red;
+$primary-color: rgb(15 15 15 / 11%);
+$transition-time: 0.3s;
+
+// 混合器
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin image-container {
+  position: relative;
+  overflow: hidden;
+  transition: all $transition-time ease;
+} 

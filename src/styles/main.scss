@@ -1,0 +1,30 @@
+@import './variables';
+
+.xhs-moyu-plugin {
+  background-color: $bg-color;
+  
+  .xhs-m-p_imgContainer {
+    &.xhs-m-p_border {
+      border: 1px solid rgb(15 15 15 / 11%);
+    }
+    
+    &:hover {
+      img {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .xhs-m-p_hidden {
+    opacity: 0;
+  }
+  // 大家都在搜
+  .query-note-wrapper {
+    background: unset !important;
+    .query-note-item {
+      img {
+        opacity: 0 !important;
+      }
+    }
+  }
+}
