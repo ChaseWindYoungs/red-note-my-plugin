@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "red note my plugin",
+  "version": "1.0.0",
+  "description": "小红书摸鱼插件",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.xiaohongshu.com/*"],
+      "js": ["dist/index.js"],
+      "css": ["dist/style.css"]
+    }
+  ]
+}
