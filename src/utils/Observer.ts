@@ -19,7 +19,7 @@ export function hideFeedsImgs() {
     }
   }, 100);
 }
-// media-container
+
 export function hideDetailImgs() {
   setTimeout(() => {
     const $exploreFeeds = $('.list-container');
@@ -32,6 +32,34 @@ export function hideDetailImgs() {
         const $img = $imgBox.find('img');
         $img.addClass('xhs-m-p_hidden');
       });
+    }
+  }, 100);
+}
+
+export function hideMediaContainerImgs() {
+  setTimeout(() => {
+    const $mediaContainer = $('.media-container'); // 详情模块
+    const $sliderContainer = $('.slider-container'); // 轮播图模块
+    const $playerContainer = $('.player-container'); // 视频模块
+    const $commentContainer = $('.comment-picture'); // 评论模块
+    const $followButton = $('.follow-button'); //顶部关注按钮
+    const $avatar = $('.avatar');
+    if ($mediaContainer.length > 0) {
+      $mediaContainer.addClass('xhs-m-p_mediaContainer');
+      $sliderContainer.addClass('xhs-m-p_hidden');
+      $playerContainer.addClass('xhs-m-p_hidden');
+      // 评论中的图片
+      const $imgBox = $commentContainer.find('.img-box');
+      $imgBox.addClass('xhs-m-p_imgContainer xhs-m-p_border');
+      const $img = $imgBox.find('img');
+      $img.addClass('xhs-m-p_hidden');
+      
+      // 头像
+      const $avatarImgBox = $avatar.find('a');
+      $avatarImgBox.addClass('xhs-m-p_imgContainer xhs-m-p_border xhs-m-p_imgBorder');
+      const $avatarImg = $avatar.find('.avatar-item');
+      $avatarImg.addClass('xhs-m-p_hidden');
+      $followButton.addClass('xhs-m-p_followButton')
     }
   }, 100);
 }
@@ -58,6 +86,14 @@ export function detailContentChange() {
   observerChange(
     $content[0],
     hideDetailImgs
+  );
+}
+export function detailMediaContentChange() {
+  const $content = $('.xhs-moyu-plugin')
+  console.log('noteContainer ========>', $('#noteContainer').length)
+  observerChange(
+    $content[0],
+    hideMediaContainerImgs
   );
 }
 

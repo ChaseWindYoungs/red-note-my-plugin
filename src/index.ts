@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { hideFeedsImgs, containerContentChange } from './utils/Observer.ts';
+import { hideFeedsImgs, containerContentChange, detailMediaContentChange, } from './utils/Observer.ts';
 import initVue from './initVue.ts';
 import './styles/main.scss';
 import { addHistory } from './utils/historyDb.ts';
@@ -37,4 +37,5 @@ $(document).ready(() => {
     console.log('initVue =========> ', error)
   }
   containerContentChange();
+  detailMediaContentChange()
 });
