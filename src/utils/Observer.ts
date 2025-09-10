@@ -11,7 +11,7 @@ export function hideFeedsImgs() {
     if ($exploreFeeds.length > 0) {
       $('.note-item').each((_, item) => {
         const $imgContainer = $(item).find('.cover');
-        console.log('$imgContainer ===========>' ,$imgContainer);
+        // console.log('$imgContainer ===========>' ,$imgContainer);
         $imgContainer.addClass('xhs-m-p_imgContainer xhs-m-p_border');
         const $img = $imgContainer.find('img');
         $img.addClass('xhs-m-p_hidden');
@@ -19,7 +19,7 @@ export function hideFeedsImgs() {
     }
   }, 100);
 }
-
+// media-container
 export function hideDetailImgs() {
   setTimeout(() => {
     const $exploreFeeds = $('.list-container');
