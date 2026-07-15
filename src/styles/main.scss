@@ -1,8 +1,8 @@
-@import './variables';
+@import "./variables";
 
 .xhs-moyu-plugin {
   background-color: $bg-color;
-  
+
   // 列表中
   .xhs-m-p_imgContainer {
     &.xhs-m-p_border {
@@ -13,7 +13,7 @@
       border-radius: 100%;
       display: block;
     }
-    
+
     &:hover {
       img {
         opacity: 1 !important;
@@ -24,7 +24,7 @@
   .xhs-m-p_hidden {
     opacity: 0;
   }
-  
+
   // 大家都在搜模块
   .query-note-wrapper {
     background: unset !important;
@@ -44,9 +44,43 @@
       }
     }
   }
+  // 顶部作者信息
+  .author:hover {
+    opacity: 1 !important;
+  }
 
   .xhs-m-p_followButton {
-    color: #000!important;
-    background-color: #fff!important;
+    color: #000 !important;
+    background-color: #fff !important;
+  }
+}
+
+.xhs-m-p_imgContainer {
+  &.xhs-m-p_border {
+    border: 1px solid rgb(15 15 15 / 11%);
+  }
+  &.xhs-m-p_imgBorder {
+    border: 1px solid rgb(15 15 15 / 11%);
+    border-radius: 100%;
+    display: block;
+  }
+
+  &:hover {
+    img {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.xhs-m-p_hidden {
+  opacity: 0 !important;
+}
+
+.xhs-m-p_mediaContainer {
+  &:hover {
+    &.xhs-m-p_hidden,
+    & .xhs-m-p_hidden {
+      opacity: 1 !important;
+    }
   }
 }

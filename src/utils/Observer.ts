@@ -39,10 +39,11 @@ export function hideDetailImgs() {
 export function hideMediaContainerImgs() {
   setTimeout(() => {
     const $mediaContainer = $('.media-container'); // 详情模块
-    const $sliderContainer = $('.slider-container'); // 轮播图模块
+    const $sliderContainer = $('.xhs-slider-container'); // 轮播图模块
     const $playerContainer = $('.player-container'); // 视频模块
     const $commentContainer = $('.comment-picture'); // 评论模块
-    const $followButton = $('.follow-button'); //顶部关注按钮
+    // const $followButton = $('.follow-button'); //顶部关注按钮
+    const $authorBox = $('.author'); //顶部作者信息
     const $avatar = $('.avatar');
     if ($mediaContainer.length > 0) {
       $mediaContainer.addClass('xhs-m-p_mediaContainer');
@@ -59,7 +60,9 @@ export function hideMediaContainerImgs() {
       $avatarImgBox.addClass('xhs-m-p_imgContainer xhs-m-p_border xhs-m-p_imgBorder');
       const $avatarImg = $avatar.find('.avatar-item');
       $avatarImg.addClass('xhs-m-p_hidden');
-      $followButton.addClass('xhs-m-p_followButton')
+      
+      // 顶部作者信息
+      $authorBox.addClass('xhs-m-p_hidden')
     }
   }, 100);
 }
@@ -157,6 +160,7 @@ const config = { attributes: false, childList: true, subtree: true };
  * @param {function()} callback 检测到变化时要执行的函数。
  */
 function observerChange(targetNode, callback) {
+  if (!targetNode) return;
   const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
       callback();

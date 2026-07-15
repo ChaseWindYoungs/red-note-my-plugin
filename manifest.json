@@ -4,13 +4,24 @@
   "version": "1.0.0",
   "description": "小红书摸鱼插件",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "downloads"
   ],
+  "background": {
+    "service_worker": "public/background.js"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.xiaohongshu.com/*"],
+      "js": ["public/pageHook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["*://*.xiaohongshu.com/*"],
       "js": ["dist/index.js"],
-      "css": ["dist/style.css"]
+      "css": ["dist/style.css"],
+      "run_at": "document_start"
     }
   ]
 }
