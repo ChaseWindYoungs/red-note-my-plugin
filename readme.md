@@ -7,7 +7,7 @@
 1、下载插件
   
   进入到发行版中，点击下载链接，选择 `red-note-my-plugin-main.zip` 压缩文件，下载到本地
-  https://github.com/ChaseWindYoungs/red-note-my-plugin/releases/tag/v0.0.1
+  https://github.com/ChaseWindYoungs/red-note-my-plugin/releases/tag/v0.0.3
 
 2、解压压缩包
 
